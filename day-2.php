@@ -105,23 +105,25 @@ function get_strategies() {
 function get_score( $opponentChoice, $playerChoice ) {
 	$score = 0;
 
-	if ( $opponentChoice === $playerChoice ) {
-		$score += 3;
-	} elseif ( 'Rock' === $opponentChoice && 'Paper' === $playerChoice ) {
-		$score += 6;
-	} elseif ( 'Paper' === $opponentChoice && 'Scissors' === $playerChoice ) {
-		$score += 6;
-	} elseif ( 'Scissors' === $opponentChoice && 'Rock' === $playerChoice ) {
-		$score += 6;
-	}
+	$score_map = array(
+		'Rock' => array(
+			'Rock' => 4,
+			'Paper' => 8,
+			'Scissors' => 3,
+		),
+		'Paper' => array(
+			'Rock' => 1,
+			'Paper' => 5,
+			'Scissors' => 9,
+		),
+		'Scissors' => array(
+			'Rock' => 7,
+			'Paper' => 2,
+			'Scissors' => 6,
+		),
+	);
 
-	if ( 'Rock' === $playerChoice) {
-		$score += 1;
-	} elseif ( 'Paper' === $playerChoice ) {
-		$score += 2;
-	} elseif ( 'Scissors' === $playerChoice ) {
-		$score += 3;
-	}
+	$score += $score_map[ $opponentChoice ][ $playerChoice ];
 
 	return $score;
 }
