@@ -70,11 +70,11 @@ function part_2() {
 
 		// Determine which move the player should make.
 		if ( 'Lose' === $playerChoice ) {
-			$playerChoice = get_losing_move( $opponentChoice );
+			$playerChoice = get_move( $opponentChoice, true );
 		} elseif ( 'Draw' === $playerChoice ) {
 			$playerChoice = $opponentChoice;
 		} elseif ( 'Win' === $playerChoice ) {
-			$playerChoice = get_winning_move( $opponentChoice );
+			$playerChoice = get_move( $opponentChoice );
 		}
 
 		$score += get_score( $opponentChoice, $playerChoice );
@@ -127,35 +127,23 @@ function get_score( $opponentChoice, $playerChoice ) {
 }
 
 /**
- * Logic for what hand to play to win the round, based on what your opponent played.
+ * Returns the move that beats the given move. If $lose is true, returns the move that loses to the given move.
  *
- * @param $opponentChoice
+ * @param $opponentChoice string The opponent's move.
+ * @param $lose bool Whether to return the move that loses to the given move.
  *
- * @return string
+ * @return int|string
  */
-function get_losing_move( $opponentChoice ) {
-	if ( 'Rock' === $opponentChoice ) {
-		return 'Scissors';
-	} elseif ( 'Paper' === $opponentChoice ) {
-		return 'Rock';
-	} elseif ( 'Scissors' === $opponentChoice ) {
-		return 'Paper';
-	}
-}
+function get_move( $opponentChoice, $lose = false ) {
+	$hands = array(
+		"Rock" => "Paper",
+		"Paper" => "Scissors",
+		"Scissors" => "Rock"
+	);
 
-/**
- * Logic for what hand to play to lose the round, based on what your opponent played.
- *
- * @param $opponentChoice
- *
- * @return string
- */
-function get_winning_move( $opponentChoice ) {
-	if ( 'Rock' === $opponentChoice ) {
-		return 'Paper';
-	} elseif ( 'Paper' === $opponentChoice ) {
-		return 'Scissors';
-	} elseif ( 'Scissors' === $opponentChoice ) {
-		return 'Rock';
+	if ( $lose ) {
+		$hands = array_flip( $hands );
 	}
+
+	return $hands[ $opponentChoice ];
 }
