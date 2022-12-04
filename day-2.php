@@ -1,5 +1,5 @@
 <?php
-/*
+/**
  * Day 2: Rock Paper Scissors
  *
  * Rules: Winning earns 6 points, a tie earns 3 points, and losing earns 0 points. Bonus points are also awarded based
