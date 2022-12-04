@@ -1,7 +1,10 @@
 <?php
+/*
+ * Day 1: Calorie Counting
+ */
 
 /**
- * Finds the Elf with the most calories and the total that elf is carrying.
+ * Part 1: Find the Elf with the most calories and the total that elf is carrying.
  *
  * @return void
  */
@@ -26,7 +29,7 @@ function part_1() {
 }
 
 /**
- * Finds the top 3 elves with the most calories and the total that they are carrying.
+ * Part 2: Find the top 3 elves with the most calories and the total that they are carrying.
  *
  * @return void
  */
