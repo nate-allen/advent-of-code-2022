@@ -49,14 +49,15 @@ function part_2() {
 		$to   = (int) $matches[3];
 		$move = (int) $matches[1];
 
-		$subStack = [];
+		$stack = [];
 		while ( $move > 0 ) {
-			$subStack[] = array_pop( $data['crates'][ $from ] );
+			$stack[] = array_pop( $data['crates'][ $from ] );
 			$move--;
 		}
 
-		$subStack = array_reverse( $subStack );
-		foreach ( $subStack as $item2 ) {
+		$stack = array_reverse( $stack );
+
+		foreach ( $stack as $item2 ) {
 			$data['crates'][ $to ][] = $item2;
 		}
 	}
