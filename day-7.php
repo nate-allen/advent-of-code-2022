@@ -122,7 +122,6 @@ function get_directory_totals() {
 	$directories = get_directories();
 	$totals      = array();
 
-	// Rewrite the above to use a foreach loop
 	foreach ( $directories as $directory ) {
 		$totals[] = array_sum( $directory );
 	}
