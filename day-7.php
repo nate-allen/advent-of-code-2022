@@ -9,7 +9,6 @@
  * @return void
  */
 function part_1() {
-	// Initialize the directory sums array and the total sum
 	$directory_totals = get_directory_totals();
 	$size             = 0;
 
