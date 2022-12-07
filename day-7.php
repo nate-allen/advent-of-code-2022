@@ -24,7 +24,7 @@ function part_1() {
 }
 
 /**
- * Part 2:
+ * Part 2: Choose a directory to delete.
  *
  * @return void
  */
