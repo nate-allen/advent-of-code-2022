@@ -1,2 +1,4 @@
 .DS_Store
 .idea/
+template.php
+data/test-data.txt
