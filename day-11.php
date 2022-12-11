@@ -91,11 +91,11 @@ function monkey_business( $rounds = 0, callable $worry ) {
  * Parses the input file and returns an array of monkeys.
  *
  * Format:
- *   [items] => Array( [0] => 82 )
- *   [operation] => "old + 7"
- *   [test] => 13
- *   [if_true] => 4
- *   [if_false] => 3
+ *   'items' => Array( [0] => 82 )
+ *   'operation' => "old + 7"
+ *   'test' => 13
+ *   'if_true' => 4
+ *   'if_false' => 3
  *
  * @return array
  */
@@ -143,9 +143,9 @@ function get_monkeys() {
  * @return float|int
  */
 function operation( $operation, $item ) {
-	$math    = explode( ' ', trim( str_replace( 'old', $item, $operation ) ) );
-	$symbols = $math[1];
+	$math   = explode( ' ', trim( str_replace( 'old', $item, $operation ) ) );
+	$symbol = $math[1];
 	unset( $math[1] );
 
-	return '*' === $symbols ? array_product( $math ) : array_sum( $math );
+	return '*' === $symbol ? array_product( $math ) : array_sum( $math );
 }
