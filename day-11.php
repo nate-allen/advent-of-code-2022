@@ -62,11 +62,8 @@ function monkey_business( $rounds = 0, callable $worry ) {
 			foreach ( $monkeys[ $monkey ]['items'] as $item ) {
 				$inspections[ $monkey ] ++;
 
-				// Reset the items array keys:
-				$monkeys[ $monkey ]['items'] = array_values( $monkeys[ $monkey ]['items'] );
-
-				// Remove the item from the monkey:
-				unset( $monkeys[ $monkey ]['items'][0] );
+				// Remove the item.
+				array_shift( $monkeys[ $monkey ]['items'] );
 
 				// Do the operation:
 				$result = operation( $monkeys[ $monkey ]['operation'], $item );
