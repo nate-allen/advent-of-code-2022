@@ -89,7 +89,7 @@ function part_2() {
  * @return array
  */
 function get_strategies() {
-	$strategy = trim( file_get_contents( __DIR__ . '/data/day-2.txt' ) );
+	$strategy = trim( file_get_contents( __DIR__ . '/data/day-02.txt' ) );
 
 	return explode( "\n", $strategy );
 }

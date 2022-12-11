@@ -48,7 +48,7 @@ function part_2() {
  * @return array
  */
 function get_items() {
-	$strategy = trim( file_get_contents( __DIR__ . '/data/day-3.txt' ) );
+	$strategy = trim( file_get_contents( __DIR__ . '/data/day-03.txt' ) );
 
 	return explode( "\n", $strategy );
 }

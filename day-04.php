@@ -54,7 +54,7 @@ function part_2() {
  * @return array
  */
 function get_assignments() {
-	$data = trim( file_get_contents( __DIR__ . '/data/day-4.txt' ) );
+	$data = trim( file_get_contents( __DIR__ . '/data/day-04.txt' ) );
 
 	return explode( "\n", $data );
 }

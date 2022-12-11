@@ -93,7 +93,7 @@ function part_2() {
  * @return array
  */
 function get_trees() {
-	$data  = file_get_contents( __DIR__ . '/data/day-8.txt' );
+	$data  = file_get_contents( __DIR__ . '/data/day-08.txt' );
 	$trees = explode( "\n", $data );
 
 	// Map over the array and convert each string to an array of integers.

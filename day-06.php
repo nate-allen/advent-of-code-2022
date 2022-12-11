@@ -29,7 +29,7 @@ function part_2() {
  * @return int
  */
 function get_marker_position( int $marker_length ) {
-	$signal        = file_get_contents( __DIR__ . '/data/day-6.txt' );
+	$signal        = file_get_contents( __DIR__ . '/data/day-06.txt' );
 	$signal_length = strlen( $signal );
 	$buffer        = '';
 	$marker        = - 1;

@@ -78,7 +78,7 @@ function part_2() {
  * @return array
  */
 function get_data() {
-	$data  = file_get_contents( __DIR__ . '/data/day-5.txt' );
+	$data  = file_get_contents( __DIR__ . '/data/day-05.txt' );
 	$lines = explode( "\n", $data );
 
 	$map = [

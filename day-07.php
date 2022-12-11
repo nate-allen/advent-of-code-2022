@@ -55,7 +55,7 @@ function part_2() {
  * @return array
  */
 function get_directories() {
-	$data        = file_get_contents( __DIR__ . '/data/day-7.txt' );
+	$data        = file_get_contents( __DIR__ . '/data/day-07.txt' );
 	$lines       = explode( "\n", $data );
 	$directories = array(
 		'/' => array(),

@@ -61,7 +61,7 @@ function part_2() {
  */
 function get_elves() {
 	// Get calories from file.
-	$calories = trim( file_get_contents( __DIR__ . '/data/day-1.txt' ) );
+	$calories = trim( file_get_contents( __DIR__ . '/data/day-01.txt' ) );
 
 	// Split by blank lines.
 	return preg_split( '/\R\R/', $calories );

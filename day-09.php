@@ -153,7 +153,7 @@ function part_2() {
  * @return array
  */
 function get_movements() {
-	$data = file_get_contents( __DIR__ . '/data/day-9.txt' );
+	$data = file_get_contents( __DIR__ . '/data/day-09.txt' );
 
 	$movements = explode( "\n", $data );
 
