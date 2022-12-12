@@ -14,7 +14,7 @@ function part_1() {
 	$starting = array( 0, 0 );
 	$ending   = array( 0, 0 );
 
-	// Get the starting position, and also change "S" and "z" to numbers.
+	// Get the starting position, and also change "S" and "E" to numbers.
 	foreach ( $map as $y => $row ) {
 		foreach ( $row as $x => $value ) {
 			if ( ord( 'S' ) === $value ) {
