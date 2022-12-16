@@ -1,7 +1,4 @@
 <?php
-// Increase the memory limit lol
-ini_set( 'memory_limit', '512M' );
-
 /**
  * Day 15: Beacon Exclusion Zone
  */
@@ -76,7 +73,7 @@ class Day15 {
 				$x = $sensor[0] + $i;
 				$y = $sensor[1] - $difference;
 
-				// Check if the x and y are outside the allowed area
+				// Check if the x and y are outside the area
 				if ( $x > $area ||
 					$x < 0 ||
 					$y > $area ||
